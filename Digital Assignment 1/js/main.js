@@ -35,7 +35,7 @@ window.onload = function() {
         var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
         var text = game.add.text( game.world.centerX, 15, "Build something amazing.", style );
         text.anchor.setTo( 0.5, 0.0 );*/
-		game.add.image(400,300, city);
+		game.add.image(400,300, 'city');
 	}
     
     function update() {
