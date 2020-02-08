@@ -17,7 +17,7 @@ window.onload = function() {
         game.load.image( 'city', 'assets/city background.png' );
     }
     
-    var bouncy;
+    var bckgrnd;
     
     function create() {
         /* Create a sprite at the center of the screen using the 'logo' image.
@@ -35,7 +35,7 @@ window.onload = function() {
         var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
         var text = game.add.text( game.world.centerX, 15, "Build something amazing.", style );
         text.anchor.setTo( 0.5, 0.0 );*/
-		game.add.image(400,300, 'city');
+		bckgrnd = game.add.image(400,300, 'city');
 	}
     
     function update() {
