@@ -143,7 +143,7 @@ window.onload = function() {
 				music.play();	
 				firstmove = false;
 			}
-			fistmove = false;
+			firstmove = false;
 			player.setVelocityX(-160);
 
 			player.anims.play('left', true);
