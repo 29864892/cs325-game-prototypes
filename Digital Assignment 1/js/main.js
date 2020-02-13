@@ -119,6 +119,7 @@ window.onload = function() {
 		if((player.y <= 199 || player.y == 207) && player.x >= 768){//207 because the character goes through the platform in the github version
 			this.add.text(175, 200, 'YOU WIN!', {fontSize: '80px', fill: '#000'});//notify player
 			gameOver = true;
+			this.input.disabled = true;
 			return;
 		}
 		if(player.y >= 560){//check if player has fallen off the platforms
