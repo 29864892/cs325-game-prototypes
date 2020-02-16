@@ -59,17 +59,9 @@ window.onload = function() {
     {
 		this.add.image(400,300,'city');
 		
-		platform = this.physics.add.staticGroup();//create group of platforms (copied from phaser tutorial)
-		platform.create(50, 250, 'ledge');//start ledge
-		platform.create(175, 320, 'ledge');
-		platform.create(300, 400, 'ledge');
-		platform.create(450, 400, 'ledge');
-		platform.create(575, 310, 'ledge');
-		platform.create(750, 220, 'ledge');//end ledge
-		this.add.image(775, 150, 'arrow');
+	
 		player = this.physics.add.sprite(60, 0, 'dude');//create player copied from phaser tutorial)
-		//  Player physics properties. Give the little guy a slight bounce. (copied from phaser tutorial)
-		player.setBounce(0.2);
+		
 		player.setCollideWorldBounds(true);//wont fall out of screen
 		this.physics.add.collider(player, platform);//player will not fall through platforms
 		
@@ -115,7 +107,7 @@ window.onload = function() {
 			explode.destroy();//remove object
 			wasHit = false;//sets to false to avoid errors
 		}
-		//console.log(player.x + ',' + player.y);
+		//console.log(player.x + ',' + player.y)
 		if(player.y == 199 && player.x >= 768){
 			this.add.text(175, 200, 'YOU WIN!', {fontSize: '80px', fill: '#000'});//notify player
 			gameOver = true;
@@ -164,7 +156,6 @@ window.onload = function() {
 			
 			player.setVelocityX(0);
 
-			player.anims.play('turn');
 		}
 		if (cursor.up.isDown && player.body.touching.down)
 		{
