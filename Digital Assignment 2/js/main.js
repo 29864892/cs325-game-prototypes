@@ -79,9 +79,6 @@ window.onload = function() {
 		scoreText = this.add.text(120, 16, 'Score 0', { fontSize: '20px', fill: '#FFFFFF' });//text for score
 		timer = this.time.addEvent({//https://rexrainbow.github.io/phaser3-rex-notes/docs/site/timer/ looped timer
 			delay: 60000,                // ms
-			//callback: callback,
-			//args: [],
-			//callbackScope: thisArg,
 			loop: true
 		});
 		
@@ -276,7 +273,7 @@ window.onload = function() {
 			wave++;
 			spawnEnemy = false;
 		}
-		if(spawnDebris == true){
+		if(spawnDebris == true){//spawn more debris
 			var newDebris = debris.create(800, Phaser.Math.FloatBetween(150,450), 'debris');
 			newDebris.setVelocityY(Phaser.Math.FloatBetween(-10, 50));	
 			newDebris.setVelocityX(Phaser.Math.FloatBetween(-40, -80));
@@ -297,7 +294,7 @@ window.onload = function() {
 	function hit(){
 		//this.destroy(player.x,player.y,'b00m');
 		//this.sound.play('boom');
-		if(invincible == false){
+		if(invincible == false){//decrement lives if player is not invincible
 			player.setX(60);//reset player position
 			player.setY(300);
 			lives--;//decrement lives and update text
