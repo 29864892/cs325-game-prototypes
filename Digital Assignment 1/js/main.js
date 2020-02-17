@@ -1,4 +1,4 @@
-"use strict";
+
 
 window.onload = function() {
     // You can copy-and-paste the code from any of the examples at http://examples.phaser.io here.
@@ -68,10 +68,10 @@ window.onload = function() {
 		this.add.image(775, 150, 'arrow');
 	
 		//  Player physics properties. Give the little guy a slight bounce. (copied from phaser tutorial)
+		
+		
+		player = this.physics.add.sprite(60, 0, 'mydude');//create player copied from phaser tutorial)
 		player.setBounce(0.2);
-		
-		player = this.physics.add.sprite(60, 0, 'dude');//create player copied from phaser tutorial)
-		
 		player.setCollideWorldBounds(true);//wont fall out of screen
 		this.physics.add.collider(player, platform);//player will not fall through platforms
 		
@@ -105,7 +105,7 @@ window.onload = function() {
 		allowGravity: false,
         repeat: 6,
         setXY: { x: 120, y: 0, stepX: 100 }
-    });
+		});
 		
 		this.physics.add.overlap(player, enemy, hit, null, this)
 	}
@@ -120,15 +120,17 @@ window.onload = function() {
 
 		//console.log(player.x + ',' + player.y)
 		if(player.y == 199 && player.x >= 768){
-
+		
+		
+		
+		}
 		console.log(player.x + ',' + player.y);
 		if((player.y <= 199 || player.y == 207) && player.x >= 768){//207 because the character goes through the platform in the github version
-
 			this.add.text(175, 200, 'YOU WIN!', {fontSize: '80px', fill: '#000'});//notify player
 			gameOver = true;
-			this.input.disabled = true;
 			return;
 		}
+	
 		if(player.y >= 560){//check if player has fallen off the platforms
 			player.setX(60);//reset player position
 			player.setY(0);
