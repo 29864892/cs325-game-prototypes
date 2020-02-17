@@ -117,13 +117,13 @@ window.onload = function() {
 			explode.destroy();//remove object
 			wasHit = false;//sets to false to avoid errors
 		}
-<<<<<<< HEAD
+
 		//console.log(player.x + ',' + player.y)
 		if(player.y == 199 && player.x >= 768){
-=======
+
 		console.log(player.x + ',' + player.y);
 		if((player.y <= 199 || player.y == 207) && player.x >= 768){//207 because the character goes through the platform in the github version
->>>>>>> 9f7823940eab7f33126524202279d8b07125c8f9
+
 			this.add.text(175, 200, 'YOU WIN!', {fontSize: '80px', fill: '#000'});//notify player
 			gameOver = true;
 			this.input.disabled = true;
