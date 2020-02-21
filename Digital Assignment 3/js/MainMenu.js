@@ -15,12 +15,12 @@ BasicGame.MainMenu.prototype = {
 		//	Here all we're doing is playing some music and adding a picture and button
 		//	Naturally I expect you to do something significantly better :)
 
-		this.music = this.add.audio('titleMusic');
-		this.music.play();
+		//this.music = this.add.audio('titleMusic');
+		//this.music.play();
 
 		this.add.sprite(0, 0, 'titlePage');
-
-		this.playButton = this.add.button( 303, 400, 'playButton', this.startGame, this);
+		this.add.text(200, 200, "Laundromat Rush", { font: "50px Verdana", fill: "#9999ff", align: "center" });
+		this.playButton = this.add.button( 350, 300, 'playButton', this.startGame, this);
 
 	},
 
@@ -33,7 +33,7 @@ BasicGame.MainMenu.prototype = {
 	startGame: function (pointer) {
 
 		//	Ok, the Play Button has been clicked or touched, so let's stop the music (otherwise it'll carry on playing)
-		this.music.stop();
+		//this.music.stop();
 
 		//	And start the actual game
 		this.state.start('Game');

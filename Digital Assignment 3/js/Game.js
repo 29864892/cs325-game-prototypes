@@ -27,6 +27,11 @@ BasicGame.Game = function (game) {
     
     // For optional clarity, you can initialize
     // member variables here. Otherwise, you will do it in create().
+	this.machineOne = null;
+	this.machineTwo = null;
+	this.machineThree = null;
+	this.machineFour = null;
+	this.socks = null;
 	
 };
 
@@ -41,18 +46,32 @@ BasicGame.Game.prototype = {
         // Anchor the sprite at its center, as opposed to its top-left corner.
         // so it will be truly centered.
         //this.bouncy.anchor.setTo( 0.5, 0.5 );
-        this.player = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'mydude');
+        //this.player = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'mydude');
         // Turn on the arcade physics engine for this sprite.
         //this.game.physics.enable( this.bouncy, Phaser.Physics.ARCADE );
         // Make it bounce off of the world bounds.
         //this.bouncy.body.collideWorldBounds = true;
-        this.player.collideWorldBounds = true;
+        //this.player.collideWorldBounds = true;
+		this.add.image(0,0, 'laundromat');
+		//this.machineOne = this.add.sprite( 50, 400, 'washer' );
+		this.machineOne = this.add.sprite( 100, 400, 'washerXL' );
+		this.machineTwo = this.add.sprite(250, 400, 'washerXL' );
+		this.machineThree = this.add.sprite(400, 400, 'washerXL' );
+		this.machineFour = this.add.sprite(550, 400, 'washerXL' );
+		this.add.image(650, 20, 'sock');
         // Add some text using a CSS style.
         // Center it in X, and position its top 15 pixels from the top of the world.
-        var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
-        var text = this.game.add.text( this.game.world.centerX, 15, "Build something amazing.", style );
+        var style = { font: "25px Verdana", fill: "#153BC8", align: "center" };
+        var text = this.game.add.text( this.game.world.centerX, 15, "Collect the matching clothes!", style );
         text.anchor.setTo( 0.5, 0.0 );
-        
+        this.socks = this.game.add.physicsGroup();
+		
+		//this.game.physics.enable(this.socks, Phaser.Physics.ARCADE);
+		this.socks.create(100, 100, 'sock');
+		this.socks.children.body.velocity.y = -100;
+		for(var i=0;i<10;i++){
+			//this.socks.create(100, 500, 'sock')
+		}
         // When you click on the sprite, you go back to the MainMenu.
         //this.bouncy.inputEnabled = true;
         //this.bouncy.events.onInputDown.add( function() { this.quitGame(); }, this );
@@ -61,7 +80,8 @@ BasicGame.Game.prototype = {
     update: function () {
 
         //  Honestly, just about anything could go here. It's YOUR game after all. Eat your heart out!
-        
+        this.socks.create(100, 100, 'sock');
+		
         // Accelerate the 'logo' sprite towards the cursor,
         // accelerating at 500 pixels/second and moving no faster than 500 pixels/second
         // in X or Y.
