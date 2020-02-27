@@ -25,7 +25,7 @@ BasicGame.Preloader.prototype = {
 
 		//	Here we load the rest of the assets our game needs.
 		//	As this is just a Project Template I've not provided these assets, swap them for your own.
-		this.load.image('titlePage', 'assets/city.png');
+		this.load.image('menu', 'assets/menu.png');
 		this.load.image('playButton', 'assets/start.png');
 		this.load.audio('titleMusic', ['assets/Poppers and Prosecco.mp3']);
 		
@@ -36,6 +36,8 @@ BasicGame.Preloader.prototype = {
 		this.load.image('washerXL','assets/washerXL.png');
 		this.load.image('laundromat','assets/laundromat2.png');
 		this.load.image('sock','assets/sock.png');
+		this.load.image('shirt','assets/shirt.png');
+		this.load.image('pants','assets/pants.png');
 	},
 
 	create: function () {

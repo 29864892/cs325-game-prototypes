@@ -31,7 +31,7 @@ BasicGame.Game = function (game) {
 	this.machineTwo = null;
 	this.machineThree = null;
 	this.machineFour = null;
-	this.socks = null;
+	
 	
 };
 
@@ -62,34 +62,47 @@ BasicGame.Game.prototype = {
         // Add some text using a CSS style.
         // Center it in X, and position its top 15 pixels from the top of the world.
         var style = { font: "25px Verdana", fill: "#153BC8", align: "center" };
-        var text = this.game.add.text( this.game.world.centerX, 15, "Collect the matching clothes!", style );
-        text.anchor.setTo( 0.5, 0.0 );
-        this.socks = this.game.add.physicsGroup();
-		
+        this.tutText = this.add.text( this.game.world.centerX, 15, "Collect the matching clothes!", style );
+        this.tutText.anchor.setTo( 0.5, 0.0 );
+        var socks = this.add.sprite(100, 200, 'sock');
+		var pants = this.add.sprite(300, 200, 'pants');
+		var shirts = this.add.sprite(500, 200, 'shirt');
+		this.lives = 3;
+		var grabbing = 1;//1 sock 2 pants 3 shirt
+		this.score = 0;
+		this.scoreText = this.add.text(25,50, "Score: 0",{ font: "bold 32px Arial", fill: "#8215C8", boundsAlignH: "center", boundsAlignV: "middle" });
+		this.lifeText = this.add.text(25,25, "Lives: 3", { font: "bold 32px Arial", fill: "#8215C8", boundsAlignH: "center", boundsAlignV: "middle" });
 		//this.game.physics.enable(this.socks, Phaser.Physics.ARCADE);
-		this.socks.create(100, 100, 'sock');
-		this.socks.children.body.velocity.y = -100;
-		for(var i=0;i<10;i++){
-			//this.socks.create(100, 500, 'sock')
-		}
+		//this.socks.create(100, 200, 'sock');
+		socks.inputEnabled = true;
+		pants.inputEnabled = true;
+		shirts.inputEnabled = true;
+		socks.events.onInputDown.add(checkSock, this);
+		pants.events.onInputDown.add(checkPants, this);
+		shirts.events.onInputDown.add(checkShirts, this);
         // When you click on the sprite, you go back to the MainMenu.
         //this.bouncy.inputEnabled = true;
         //this.bouncy.events.onInputDown.add( function() { this.quitGame(); }, this );
     },
 
     update: function () {
-
-        //  Honestly, just about anything could go here. It's YOUR game after all. Eat your heart out!
-        this.socks.create(100, 100, 'sock');
 		
+        //  Honestly, just about anything could go here. It's YOUR game after all. Eat your heart out!
+        this.lifeText.setText("Lives: "+this.lives);
+		if(this.score != 0 || this.lives != 3){
+			this.tutText.setText("");
+		}
         // Accelerate the 'logo' sprite towards the cursor,
         // accelerating at 500 pixels/second and moving no faster than 500 pixels/second
         // in X or Y.
         // This function returns the rotation angle that makes it visually match its
         // new trajectory.
         //this.bouncy.rotation = this.game.physics.arcade.accelerateToPointer( this.bouncy, this.game.input.activePointer, 500, 500, 500 );
+		if(this.lives == 0){
+			this.quitGame();
+		}
     },
-
+	
     quitGame: function () {
 
         //  Here you should destroy anything you no longer need.
@@ -99,5 +112,30 @@ BasicGame.Game.prototype = {
         this.state.start('MainMenu');
 
     }
-
+	
 };
+function checkSock(grabbing){
+		console.log('check');
+		if(grabbing != 1){
+			this.lives--;
+		}
+		moveSprites(this);
+	}
+function checkPants(grabbing){
+		console.log('check');
+		if(grabbing != 2){
+			this.lives--;
+		}
+		else{
+			moveSprites(this);
+		}
+	}
+function checkShirts(grabbing){
+		console.log('check');
+		if(grabbing != 3){
+			this.lives--;
+		}
+	}
+function moveSprites(game){
+	console.log("move sprites");
+}	

@@ -18,7 +18,8 @@ BasicGame.MainMenu.prototype = {
 		//this.music = this.add.audio('titleMusic');
 		//this.music.play();
 
-		this.add.sprite(0, 0, 'titlePage');
+		this.add.sprite(0, 0, 'menu');
+		this.add.sprite(590, 100, 'washerXL');
 		this.add.text(200, 200, "Laundromat Rush", { font: "50px Verdana", fill: "#9999ff", align: "center" });
 		this.playButton = this.add.button( 350, 300, 'playButton', this.startGame, this);
 
