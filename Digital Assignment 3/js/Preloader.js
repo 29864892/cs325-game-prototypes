@@ -28,7 +28,8 @@ BasicGame.Preloader.prototype = {
 		this.load.image('menu', 'assets/menu.png');
 		this.load.image('playButton', 'assets/start.png');
 		this.load.audio('titleMusic', ['assets/Poppers and Prosecco.mp3']);
-		
+		this.load.image('endScreen', 'assets/laundromat.png');
+		this.load.image('retry', 'assets/retry.png');
 		//	+ lots of other required assets here
         //this.load.image( 'logo', 'assets/phaser.png' );
 		this.load.spritesheet( 'mydude', 'assets/mydude.png', 18, 40);
