@@ -59,6 +59,8 @@ BasicGame.Game.prototype = {
 		this.machineThree = this.add.sprite(400, 400, 'washerXL' );
 		this.machineFour = this.add.sprite(550, 400, 'washerXL' );
 		this.add.image(650, 20, 'sock');
+		this.music = this.add.audio('gameMusic');
+		this.music.play();
         // Add some text using a CSS style.
         // Center it in X, and position its top 15 pixels from the top of the world.
         var style = { font: "25px Verdana", fill: "#153BC8", align: "center" };
@@ -131,7 +133,7 @@ BasicGame.Game.prototype = {
 
         //  Here you should destroy anything you no longer need.
         //  Stop music, delete sprites, purge caches, free resources, all that good stuff.
-
+		this.music.stop();
         //  Then let's go back to the main menu.
         this.state.start('GameOver');
 

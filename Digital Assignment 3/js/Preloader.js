@@ -27,7 +27,9 @@ BasicGame.Preloader.prototype = {
 		//	As this is just a Project Template I've not provided these assets, swap them for your own.
 		this.load.image('menu', 'assets/menu.png');
 		this.load.image('playButton', 'assets/start.png');
-		this.load.audio('titleMusic', ['assets/Poppers and Prosecco.mp3']);
+		this.load.audio('titleMusic', ['assets/bensound-downtown.mp3']); 
+		this.load.audio('gameMusic', ['assets/bensound-dubstep.mp3']);//www.bensound.com
+		this.load.audio('endMusic', ['assets/f.mp3']);// https://www.fesliyanstudios.com
 		this.load.image('endScreen', 'assets/laundromat.png');
 		this.load.image('retry', 'assets/retry.png');
 		//	+ lots of other required assets here
