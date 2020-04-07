@@ -77,6 +77,7 @@ BasicGame.BattleOne.prototype = {
 	},
 
     update: function () {
+		console.log(this.charge);
 		//health conditions
 		if(this.pHealth < 50 && this.isLow == false){
 			//change sprite
@@ -286,7 +287,7 @@ BasicGame.BattleOne.prototype = {
 		console.log('Shouldve used Luna...');
         this.state.start('GameOver');
 
-    }
+    },
 	//victory, go onto the next match
 	gameWon: function(){
 		console.log('hmph!');
