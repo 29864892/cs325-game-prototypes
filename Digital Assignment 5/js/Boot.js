@@ -30,14 +30,14 @@ BasicGame.Boot.prototype = {
             this.scale.forceLandscape = true;
             this.scale.pageAlignHorizontally = true;
         }
-
+		
     },
 
     preload: function () {
 
         //  Here we load the assets required for our Preloader state (in this case a background and a loading bar)
-        this.load.image('preloaderBackground', 'assets/space.png');
-        this.load.image('preloaderBar', 'assets/preloader_bar.png');
+        this.load.image('preloaderBackground', 'Assets/space.png');
+        this.load.image('preloaderBar', 'Assets/preloader_bar.png');
 
     },
 

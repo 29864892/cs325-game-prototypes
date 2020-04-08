@@ -33,7 +33,8 @@ BasicGame.BattleOne = function (game) {
 BasicGame.BattleOne.prototype = {
 
     create: function () {
-
+		this.music = this.add.audio('gameMusic');
+		this.music.play();
         
 		this.add.sprite(0, 0, 'ui');
 		//buttons
@@ -332,13 +333,13 @@ BasicGame.BattleOne.prototype = {
         //  Stop music, delete sprites, purge caches, free resources, all that good stuff.
 		//this.music.stop();
         //  Then let's go back to the main menu.
-		
+		this.music.stop();
         this.state.start('GameOver');
 
     },
 	//victory, go onto the next match
 	gameWon: function(){
-		
+		this.music.stop();
 		this.state.start('BattleWon');
 	}
 
