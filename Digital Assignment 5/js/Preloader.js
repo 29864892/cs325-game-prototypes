@@ -27,7 +27,7 @@ BasicGame.Preloader.prototype = {
 		//	As this is just a Project Template I've not provided these Assets, swap them for your own.
 		this.load.image('menu', 'Assets/MainMenu.png');
 		this.load.image('playButton', 'Assets/start.png');
-		this.load.audio('titleMusic', ['Assets/bensound-downtown.mp3']); 
+		this.load.audio('titleMusic', ['Assets/Ketsa_-_11_-_Slow_Vibing.mp3']); https://freemusicarchive.org/music/Ketsa/Raising_Frequecy/Slow_Vibing
 		this.load.audio('gameMusic', ['Assets/bensound-dubstep.mp3']);//www.bensound.com
 		this.load.audio('endMusic', ['Assets/f.mp3']);// https://www.fesliyanstudios.com
 		this.load.image('endScreen', 'Assets/laundromat.png');
