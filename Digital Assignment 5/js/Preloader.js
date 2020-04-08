@@ -13,7 +13,7 @@ BasicGame.Preloader.prototype = {
 
 	preload: function () {
 
-		//	These are the assets we loaded in Boot.js
+		//	These are the Assets we loaded in Boot.js
 		//	A nice sparkly background and a loading progress bar
 		this.background = this.add.sprite(0, 0, 'preloaderBackground');
 		this.preloadBar = this.add.sprite(300, 400, 'preloaderBar');
@@ -23,45 +23,45 @@ BasicGame.Preloader.prototype = {
 		//	as the files below are loaded in.
 		this.load.setPreloadSprite(this.preloadBar);
 
-		//	Here we load the rest of the assets our game needs.
-		//	As this is just a Project Template I've not provided these assets, swap them for your own.
+		//	Here we load the rest of the Assets our game needs.
+		//	As this is just a Project Template I've not provided these Assets, swap them for your own.
 		this.load.image('menu', 'Assets/MainMenu.png');
-		this.load.image('playButton', 'assets/start.png');
-		this.load.audio('titleMusic', ['assets/bensound-downtown.mp3']); 
-		this.load.audio('gameMusic', ['assets/bensound-dubstep.mp3']);//www.bensound.com
-		this.load.audio('endMusic', ['assets/f.mp3']);// https://www.fesliyanstudios.com
-		this.load.image('endScreen', 'assets/laundromat.png');
-		this.load.image('retry', 'assets/retry.png');
-		//	+ lots of other required assets here
+		this.load.image('playButton', 'Assets/start.png');
+		this.load.audio('titleMusic', ['Assets/bensound-downtown.mp3']); 
+		this.load.audio('gameMusic', ['Assets/bensound-dubstep.mp3']);//www.bensound.com
+		this.load.audio('endMusic', ['Assets/f.mp3']);// https://www.fesliyanstudios.com
+		this.load.image('endScreen', 'Assets/laundromat.png');
+		this.load.image('retry', 'Assets/retry.png');
+		//	+ lots of other required Assets here
 		//BattleOne ui Assets
-		this.load.image('ui', 'assets/ui.png');
-		this.load.image('sUi', 'assets/startUI.png');
-		this.load.image('messageUI', 'assets/message.png');
-		this.load.image('attack','assets/attack.png');
+		this.load.image('ui', 'Assets/ui.png');
+		this.load.image('sUi', 'Assets/startUI.png');
+		this.load.image('messageUI', 'Assets/message.png');
+		this.load.image('attack','Assets/attack.png');
 		//attacks
-			this.load.image('customerSupp','assets/customerSupport.png');
-			this.load.image('charge','assets/charge.png');
-				this.load.image('charged', 'assets/chargedphone.png');
-			this.load.image('wrongN','assets/wrongNumber.png');
-			this.load.image('smartP','assets/smartPunch.png');
+			this.load.image('customerSupp','Assets/customerSupport.png');
+			this.load.image('charge','Assets/charge.png');
+				this.load.image('charged', 'Assets/chargedphone.png');
+			this.load.image('wrongN','Assets/wrongNumber.png');
+			this.load.image('smartP','Assets/smartPunch.png');
 		//options
-		this.load.image('item', 'assets/item.png');
-		this.load.image('run', 'assets/run.png');
-		this.load.image('click','assets/click.png');
+		this.load.image('item', 'Assets/item.png');
+		this.load.image('run', 'Assets/run.png');
+		this.load.image('click','Assets/click.png');
 		
-		this.load.image('iFighter','assets/Phone100%.png');
-		this.load.image('iFighterF','assets/phone1hp.png');
+		this.load.image('iFighter','Assets/Phone100%.png');
+		this.load.image('iFighterF','Assets/phone1hp.png');
 		
-		this.load.image('penciler','assets/Penciler.png');
-		this.load.image('pencilerF','assets/penciler1hp.png');
-        //this.load.image( 'logo', 'assets/phaser.png' );
-		this.load.spritesheet( 'mydude', 'assets/mydude.png', 18, 40);
-		this.load.image('washer','assets/washer.png');
-		this.load.image('washerXL','assets/washerXL.png');
-		this.load.image('laundromat','assets/laundromat2.png');
-		this.load.image('sock','assets/sock.png');
-		this.load.image('shirt','assets/shirt.png');
-		this.load.image('pants','assets/pants.png');
+		this.load.image('penciler','Assets/Penciler.png');
+		this.load.image('pencilerF','Assets/penciler1hp.png');
+        //this.load.image( 'logo', 'Assets/phaser.png' );
+		this.load.spritesheet( 'mydude', 'Assets/mydude.png', 18, 40);
+		this.load.image('washer','Assets/washer.png');
+		this.load.image('washerXL','Assets/washerXL.png');
+		this.load.image('laundromat','Assets/laundromat2.png');
+		this.load.image('sock','Assets/sock.png');
+		this.load.image('shirt','Assets/shirt.png');
+		this.load.image('pants','Assets/pants.png');
 	},
 
 	create: function () {
