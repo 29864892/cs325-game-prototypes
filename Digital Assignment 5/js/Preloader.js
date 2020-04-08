@@ -25,7 +25,7 @@ BasicGame.Preloader.prototype = {
 
 		//	Here we load the rest of the assets our game needs.
 		//	As this is just a Project Template I've not provided these assets, swap them for your own.
-		this.load.image('menu', 'assets/MainMenu.png');
+		this.load.image('menu', 'Assets/MainMenu.png');
 		this.load.image('playButton', 'assets/start.png');
 		this.load.audio('titleMusic', ['assets/bensound-downtown.mp3']); 
 		this.load.audio('gameMusic', ['assets/bensound-dubstep.mp3']);//www.bensound.com
@@ -52,7 +52,7 @@ BasicGame.Preloader.prototype = {
 		this.load.image('iFighter','assets/Phone100%.png');
 		this.load.image('iFighterF','assets/phone1hp.png');
 		
-		this.load.image('penciler','assets/penciler.png');
+		this.load.image('penciler','assets/Penciler.png');
 		this.load.image('pencilerF','assets/penciler1hp.png');
         //this.load.image( 'logo', 'assets/phaser.png' );
 		this.load.spritesheet( 'mydude', 'assets/mydude.png', 18, 40);
