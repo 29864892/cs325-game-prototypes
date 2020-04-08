@@ -1,4 +1,3 @@
-
 BasicGame.BattleWon = function (game) {
 
 	this.music = null;
