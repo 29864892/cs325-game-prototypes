@@ -41,7 +41,7 @@ BasicGame.Preloader.prototype = {
 		//attacks
 			this.load.image('customerSupp','assets/customerSupport.png');
 			this.load.image('charge','assets/charge.png');
-				this.load.image('charged', 'assets/chargedPhone.png');
+				this.load.image('charged', 'assets/chargedphone.png');
 			this.load.image('wrongN','assets/wrongNumber.png');
 			this.load.image('smartP','assets/smartPunch.png');
 		//options
