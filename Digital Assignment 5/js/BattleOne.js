@@ -121,7 +121,7 @@ BasicGame.BattleOne.prototype = {
 			}
 		}
 		//charge condition
-		if(this.chargeVal >= 6){
+		if(this.chargeVal >= 10){
 			this.chargedUp = true;
 			this.eHealth = 0;
 			this.EncounterText.setText('Bapple Ifighter released its energy!' ,{ font: "bold 32px Impact", fill: "#8215C8", boundsAlignH: "center", boundsAlignV: "middle" });
