@@ -18,8 +18,9 @@ BasicGame.BattleWon.prototype = {
 
 		this.add.sprite(0, 0, 'endScreen');
 		//this.add.sprite(590, 100, 'washerXL');
-		this.add.text(150, 200, "BattleWon!", { font: "100px Verdana", fill: "#9999ff", align: "center" });
+		this.add.text(150, 100, "Battle Won!", { font: "100px Verdana", fill: "#9999ff", align: "center" });
 		this.playButton = this.add.button( 350, 400, 'retry', this.startGame, this);
+		this.add.sprite(200, 400, 'iFighter');
 		},
 
 	update: function () {
@@ -31,11 +32,11 @@ BasicGame.BattleWon.prototype = {
 	startGame: function (pointer) {
 
 		//	Ok, the Play Button has been clicked or touched, so let's stop the music (otherwise it'll carry on playing)
-		this.music.stop();
+		//this.music.stop();
 
 		//	And start the actual game
 		this.state.start('MainMenu');
 
-	}
+	},
 
 };

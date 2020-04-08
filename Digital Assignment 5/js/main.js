@@ -16,7 +16,7 @@ window.onload = function() {
 	
 
 	game.state.add('GameOver', BasicGame.GameOver);
-	//game.state.add('BattleWon', BasicGame.BattleWon);
+	game.state.add('BattleWon', BasicGame.BattleWon);
 	
 	//	Now start the Boot state.
 	game.state.start('Boot');

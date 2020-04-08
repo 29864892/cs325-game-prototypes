@@ -18,9 +18,9 @@ BasicGame.GameOver.prototype = {
 		this.music.play();
 
 		this.add.sprite(0, 0, 'endScreen');
-		//this.add.sprite(590, 100, 'washerXL');
 		this.add.text(150, 200, "Game Over", { font: "100px Verdana", fill: "#9999ff", align: "center" });
 		this.playButton = this.add.button( 350, 400, 'retry', this.startGame, this);
+		this.add.sprite(200, 400, 'iFighterF');
 		},
 
 	update: function () {

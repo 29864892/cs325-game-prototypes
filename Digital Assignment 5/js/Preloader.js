@@ -33,7 +33,7 @@ BasicGame.Preloader.prototype = {
 		this.load.image('endScreen', 'assets/laundromat.png');
 		this.load.image('retry', 'assets/retry.png');
 		//	+ lots of other required assets here
-		//BattleOne Assets
+		//BattleOne ui Assets
 		this.load.image('ui', 'assets/ui.png');
 		this.load.image('sUi', 'assets/startUI.png');
 		this.load.image('messageUI', 'assets/message.png');
@@ -44,6 +44,7 @@ BasicGame.Preloader.prototype = {
 				this.load.image('charged', 'assets/chargedPhone.png');
 			this.load.image('wrongN','assets/wrongNumber.png');
 			this.load.image('smartP','assets/smartPunch.png');
+		//options
 		this.load.image('item', 'assets/item.png');
 		this.load.image('run', 'assets/run.png');
 		this.load.image('click','assets/click.png');
