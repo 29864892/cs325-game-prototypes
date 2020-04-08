@@ -82,11 +82,15 @@ BasicGame.BattleOne.prototype = {
 		console.log('battle begin!');
 		this.chargedUp = false;
 		this.end = false;
+		this.won = true;
 	},
 
     update: function () {
 		if(this.continueButton.visible == false && this.end == true){
+			if(!this.won){
 				this.quitGame();
+			}
+			this.gameWon();
 		}
 		if(this.chargeVal >= 6){
 			this.chargedUp = true;
@@ -107,8 +111,14 @@ BasicGame.BattleOne.prototype = {
 				this.end = true;
 			}
 		}
-		if(this.eHealth <= 0 && !this.chargedUp){
-			this.gameWon();
+		if(this.eHealth <= 0 && !this.chargedUp && this.continueButton.visible == false){
+			this.eHealth = 0;
+			if(this.end == false){
+				this.EncounterText.setText('Penciler ran out of lead!' ,{ font: "bold 32px Impact", fill: "#8215C8", boundsAlignH: "center", boundsAlignV: "middle" });
+				this.messageUI();
+				this.end = true;
+				this.won = true;
+			}
 		}
 		//charge condition
 		if(this.chargeVal >= 6){
