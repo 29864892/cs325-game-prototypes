@@ -49,7 +49,7 @@ BasicGame.Preloader.prototype = {
 		this.load.image('run', 'Assets/run.png');
 		this.load.image('click','Assets/click.png');
 		
-		this.load.image('iFighter','Assets/phone100%.png');
+		this.load.image('iFighter','Assets/phone100.png');
 		this.load.image('iFighterF','Assets/phone1hp.png');
 		
 		this.load.image('penciler','Assets/Penciler.png');
