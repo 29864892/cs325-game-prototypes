@@ -19,7 +19,7 @@ BasicGame.startOne.prototype = {
 		this.music.play();
 
 		this.add.sprite(0, 0, 'screenOne');
-		this.playButton = this.add.button( 270, 390, 'playButton', this.startGame, this);
+		//this.playButton = this.add.button( 270, 390, 'playButton', this.startGame, this);
 		this.time.events.add(Phaser.Timer.SECOND * 8, this.startGame, this);//https://phaser.io/examples/v2/time/basic-timed-event
 	},
 
