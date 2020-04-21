@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Adventure in a Lost World</title>
+	<script src="js/phaser.min.js"></script>
+	<!-- Boot.js must come first since it creates the BasicGame object
+	that stores all the states. -->
+	<script src="js/Boot.js"></script>
+	<script src="js/Preloader.js"></script>
+	<script src="js/MainMenu.js"></script>
+	<script src="js/startOne.js"></script>
+	<script src="js/BattleOne.js"></script>
+	<script src="js/BattleWon.js"></script>
+	<script src ="js/GameOver.js"></script>
+	
+	
+	<!-- main.js must come last since it references the other ones. -->
+	<script src="js/main.js"></script>
+
+<style>
+body
+{
+    color: #777;
+    font-family: "Avenir", Verdana, sans-serif;
+}
+#readme
+{
+    margin-top: 10px;
+}
+</style>
+
+</head>
+<body>
+<div id="game"></div>
+<div id="readme">
+<h2>Adventure in a Lost World</h2>
+
+<ul>
+<li><strong>Originality:</strong>
+The characters were all made by myself through paint.net, as well as the backgrounds and buttons
+</li>
+
+<li><strong>Technical Merit:</strong>
+I made the ui simple and responsive, which required multiple checks and linking the prompts together properly and ensuring smooth transitions.
+</li>
+
+<li><strong>Prototype Postmortem:</strong>
+What did you learn from this prototype?
+I learned how to create a ui with multiple paths and to return to the main path. The hardest part was making sure that the buttons didn't overlap and that the prompts would actually show up before the game 
+ends. Creating the base ui will definitely make the further iterations of the game easier and
+allow me to put more effort into other parts of the game.
+
+</li>
+
+<li><strong>Prototype Assets:</strong>
+The only assets that were taken from elsewhere were the music, which is linked in Preloader.js, as
+well as the template loading screen.
+<ul>
+<li>Loading screen: template</li>
+<li>Main menu: self-made, music: https://freemusicarchive.org/music/Ketsa/Raising_Frequecy/Slow_Vibing</li>
+<li>Battle Scene: sprites self made, ui self made, music: https://freemusicarchive.org/music/Chad_Crouch/Arps/Moonrise</a></li>
+<li>End screen: self made music: https://freemusicarchive.org/music/Ketsa/Raising_Frequecy/Memories_Renewed</a></li>
+<li>Music: "Poppers and Prosecco" Kevin MacLeod (<a href="incompetech.com">incompetech.com</a>). Licensed under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons: By Attribution 3.0 License</a></li>
+</ul>
+</li>
+
+<li><strong>Prototype Closest Other Game:</strong>
+Which other game most closely resembles your game? If you are borrowing code from a Phaser Example, you must say so here. If you borrow code from elsewhere, you must say so here.
+<ul>
+<li>The ui is similar to that of pokemon because of the options and text presentation.</li>
+</ul>
+</li>
+
+<li><strong>High Concept:</strong>
+
+Strategic role playing game where you play as a smartphone and beat up other objects.
+</li>
+
+<li><strong>Theme:</strong>
+n/a
+</li>
+
+<li><strong>Mandated Variety:</strong>
+n/a
+</li>
+
+<li><strong>Prototype Goal:</strong>
+What game mechanic is this prototype evaluating?
+The goal of this prototype was to get the basic ui established and to begin to
+work on the combat system.
+</li>
+
+<li><strong>Player Experience Goals:</strong>
+What experience do you want players to have when playing your game?
+I want players to learn the skills through gameplay, and learn what skills work best in
+order to win.
+</li>
+
+<li><strong>Gameplay:</strong>
+The core gameplay revolves around attacking enemies by clicking which attack to use.
+There are four options for the given character: charge, which increases attack and
+ends the game after 15 uses, customer service, which heals the player back to full
+the first use with diminishing returns, smart punch, which is a basic damage attack,
+and wrong number, which prevents the enemy from attacking and reduces their damage. 
+Some plans for increasing the difficulty would be to add in status conditions in future
+fights that restrict these skills (i.e. wrong number and charge have no effect,
+or customer service healing is halved.).
+</li>
+
+<li><strong>Strategies:</strong>
+What player strategies do you expect will be effective at playing this game?
+For the first level, spamming charge and healing is the fastest strategy and I plans
+on punishing this strategy in later levels to force the player to adapt. A more tactical
+strategy is to use charge to boost smart punch damage. Another abusive strategy might be
+to spam wrong number for a large amount of turns so that the ai does no damage. This
+strategy is somewhat addressed in the enemy gaining a set amount of damage each turn,
+and will be addressed in later levels as well with a limit to effective uses.
+</li>
+
+<li><strong>Story/Setting/Premise:</strong>
+A paragraph about the world your game is set in and who the characters are. What makes the game world and its occupants unique and interesting? Do the tokens represent something? If the game has a backstory, mention it here. If the game is abstract, then say so.
+How will the dramatic tension interact with the gameplay tension?
+</li>
+
+<li><strong>Target Audience:</strong>
+A single sentence that describes the demographic you're trying to reach.
+Players that enjoy turn-based games.
+</li>
+
+<li><strong>Play Time:</strong>
+How long does your game take to play?
+The game takes about 5 minutes depending on how long the player takes to decide their move each turn.
+
+</li>
+
+</ul>
+</div>
+</body>
+</html>
