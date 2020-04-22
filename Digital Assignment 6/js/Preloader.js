@@ -63,7 +63,7 @@ BasicGame.Preloader.prototype = {
         //BattleTwo assets
 		this.load.image('screenTwo','Assets/transitionTwo.png');
 		this.load.image('bBoy','Assets/Bottle boy.png');
-		this.load.image('bBoyF','Assets/Bottle boy 1%.png"');
+		this.load.image('bBoyF','Assets/Bottleboy1.png"');
 		this.load.audio('bBoyMusic','Assets/Subterrestrial_-_11_-_Ocean_Beach.mp3');
 		//GameWon assets
 		this.load.image('end','Assets/TrueEnd.png');
