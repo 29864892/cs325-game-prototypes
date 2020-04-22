@@ -88,6 +88,7 @@ BasicGame.BattleOne.prototype = {
 		this.end = false;
 		this.won = true;
 		this.lowPrompt = true;
+		//this.playButton = this.add.button( 250, 400, 'continue', this.gameWon, this);
 	},
 
     update: function () {
@@ -337,7 +338,7 @@ BasicGame.BattleOne.prototype = {
 	enemyTurn: function(){
 		this.isTurnE = true;
 		this.damage = this.rnd.integerInRange(12, 20);
-		this.EncounterText.setText('Penciler used leadShot, dealing ' + this.damage + 'damage!');
+		this.EncounterText.setText('Penciler used leadShot, dealing ' + this.damage + ' damage!');
 		this.pHealth -= this.damage;
 		this.messageUI();
 		this.isTurn = true;

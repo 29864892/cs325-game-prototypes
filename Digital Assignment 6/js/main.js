@@ -15,10 +15,11 @@ window.onload = function() {
 	
 	game.state.add('startOne',BasicGame.startOne);
 	game.state.add('BattleOne', BasicGame.BattleOne);
-	
+	game.state.add('StartTwo',BasicGame.StartTwo);
+	game.state.add('BattleTwo', BasicGame.BattleTwo);
 	game.state.add('GameOver', BasicGame.GameOver);
 	game.state.add('BattleWon', BasicGame.BattleWon);
-	
+	game.state.add('GameWon', BasicGame.GameWon);
 	//	Now start the Boot state.
 	game.state.start('Boot');
 

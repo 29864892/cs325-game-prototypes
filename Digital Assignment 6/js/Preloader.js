@@ -47,7 +47,7 @@ BasicGame.Preloader.prototype = {
 		//attacks
 			this.load.image('customerSupp','Assets/customerSupport.png');
 			this.load.image('charge','Assets/charge.png');
-			this.load.image('charged', 'Assets/chargedPhone.png');
+				this.load.image('charged', 'Assets/chargedphone.png');
 			this.load.image('wrongN','Assets/wrongNumber.png');
 			this.load.image('smartP','Assets/smartPunch.png');
 		//options
@@ -58,16 +58,15 @@ BasicGame.Preloader.prototype = {
 		this.load.image('iFighter','Assets/phone100.png');
 		this.load.image('iFighterF','Assets/phone1hp.png');
 		
-		this.load.image('penciler','Assets/penciler.png');
+		this.load.image('penciler','Assets/Penciler.png');
 		this.load.image('pencilerF','Assets/penciler1hp.png');
-        //this.load.image( 'logo', 'Assets/phaser.png' );
-		this.load.spritesheet( 'mydude', 'Assets/mydude.png', 18, 40);
-		this.load.image('washer','Assets/washer.png');
-		this.load.image('washerXL','Assets/washerXL.png');
-		this.load.image('laundromat','Assets/laundromat2.png');
-		this.load.image('sock','Assets/sock.png');
-		this.load.image('shirt','Assets/shirt.png');
-		this.load.image('pants','Assets/pants.png');
+        //BattleTwo assets
+		this.load.image('screenTwo','Assets/transitionTwo.png');
+		this.load.image('bBoy','Assets/bottle boy.png');
+		this.load.image('bBoyF','Assets/Bottle boy 1%.png');
+		this.load.audio('bBoyMusic','Assets/Subterrestrial_-_11_-_Ocean_Beach.mp3');
+		//GameWon assets
+		this.load.image('end','Assets/TrueEnd.png');
 	},
 
 	create: function () {
